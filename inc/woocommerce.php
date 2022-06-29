@@ -4,7 +4,7 @@
  *
  * @link https://woocommerce.com/
  *
- * @package _s
+ * @package La_petite_Montrealaise
  */
 
 /**
@@ -43,7 +43,7 @@ add_action( 'after_setup_theme', '_s_woocommerce_setup' );
  * @return void
  */
 function _s_woocommerce_scripts() {
-	wp_enqueue_style( '_s-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _S_VERSION );
+	wp_enqueue_style( ' la-petite-Montrealaise-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _S_VERSION );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {
@@ -57,7 +57,7 @@ function _s_woocommerce_scripts() {
 			font-style: normal;
 		}';
 
-	wp_add_inline_style( '_s-woocommerce-style', $inline_font );
+	wp_add_inline_style( ' la-petite-Montrealaise-woocommerce-style', $inline_font );
 }
 add_action( 'wp_enqueue_scripts', '_s_woocommerce_scripts' );
 
@@ -181,11 +181,11 @@ if ( ! function_exists( '_s_woocommerce_cart_link' ) ) {
 	 */
 	function _s_woocommerce_cart_link() {
 		?>
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', '_s' ); ?>">
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'la-petite-montrealaise' ); ?>">
 			<?php
 			$item_count_text = sprintf(
 				/* translators: number of items in the mini cart. */
-				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), '_s' ),
+				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'la-petite-montrealaise' ),
 				WC()->cart->get_cart_contents_count()
 			);
 			?>
