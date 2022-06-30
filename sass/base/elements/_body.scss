@@ -1,3 +1,58 @@
 body {
-	background: $color__background-body; // Fallback for when there is no custom background color defined.
+  background: $color__background-body; // Fallback for when there is no custom background color defined.
+}
+
+.main-padding-y {
+  padding: $main-y-spacing 0;
+}
+
+.container {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.pt-50 {
+  padding-top: 50px;
+}
+
+.flex {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid-2 {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 600px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
 }

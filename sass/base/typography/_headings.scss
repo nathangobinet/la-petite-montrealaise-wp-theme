@@ -6,4 +6,8 @@ h5,
 h6 {
 	font-family: $font__title;
 	clear: both;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-style: normal;
+	font-weight: 500;
 }

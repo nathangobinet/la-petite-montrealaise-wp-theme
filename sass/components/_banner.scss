@@ -1,0 +1,66 @@
+.main-page-banner {
+  height: 110vh;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-top: -$main-y-spacing;
+  margin-bottom: $main-y-spacing;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  .wp-block-site-tagline {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #F8FAFC;
+  }
+
+  .header-titles {
+    margin-bottom: 30vh;
+
+    @media screen and (max-width: 1300px) {
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  .wp-block-buttons {
+    width: 250px;
+    margin: auto;
+  }
+
+  .wp-block-buttons a:after {
+    margin-left: 25px;
+    content: '▾';
+  }
+
+  .custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(134% + 1.3px);
+    height: 85px;
+    transform: rotateY(180deg);
+  }
+
+  .custom-shape-divider-bottom .shape-fill {
+    fill: #F8FAFC;
+  }
+}

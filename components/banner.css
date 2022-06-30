@@ -1,0 +1,67 @@
+@charset "UTF-8";
+.main-page-banner {
+	height: 110vh;
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	padding-top: -50px;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}
+
+.main-page-banner .wp-block-site-tagline {
+	font-family: 'Quicksand';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 22px;
+	/* identical to box height */
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #F8FAFC;
+}
+
+.main-page-banner .header-titles {
+	margin-bottom: 30vh;
+}
+
+@media screen and (max-width: 1300px) {
+	.main-page-banner .header-titles img {
+		width: 70%;
+	}
+}
+
+.main-page-banner .wp-block-buttons {
+	width: 250px;
+	margin: auto;
+}
+
+.main-page-banner .wp-block-buttons a:after {
+	margin-left: 25px;
+	content: '▾';
+}
+
+.main-page-banner .custom-shape-divider-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.main-page-banner .custom-shape-divider-bottom svg {
+	position: relative;
+	display: block;
+	width: calc(134% + 1.3px);
+	height: 85px;
+	transform: rotateY(180deg);
+}
+
+.main-page-banner .custom-shape-divider-bottom .shape-fill {
+	fill: #F8FAFC;
+}
+
+/*# sourceMappingURL=banner.css.map */

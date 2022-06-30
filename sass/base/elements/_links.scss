@@ -1,5 +1,6 @@
 a {
 	color: $color__link;
+	text-decoration: none;
 
 	&:visited {
 		color: $color__link-visited;
@@ -18,5 +19,36 @@ a {
 	&:hover,
 	&:active {
 		outline: 0;
+	}
+}
+
+span>a,
+li>a,
+h1>a,
+h2>a,
+h3>a,
+h4>a,
+h5>a,
+h6>a {
+	padding-bottom: 1px;
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		height: 1px;
+		width: 100%;
+		left: 0;
+		bottom: 0;
+		opacity: 0;
+		transform: translateY(3px);
+		background: $color__link;
+		;
+		transition: opacity 0.2s ease, transform 0.2s ease;
+	}
+
+	&:hover:after {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }

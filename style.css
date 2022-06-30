@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: La_petite_Montrealaise
 Theme URI: https://underscores.me/
@@ -48,7 +49,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300,400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
 /*--------------------------------------------------------------
 # Generic
@@ -389,7 +390,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
+	color: #202A38;
 	font-family: "Inter", "Segoe UI", Roboto, Ubuntu, -apple-system, sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -403,6 +404,10 @@ h5,
 h6 {
 	font-family: "Quicksand", "Segoe UI", Roboto, Ubuntu, -apple-system, sans-serif;
 	clear: both;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-style: normal;
+	font-weight: 500;
 }
 
 p {
@@ -460,7 +465,62 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #fff;
+	background: #F8FAFC;
+}
+
+.main-padding-y {
+	padding: 50px 0;
+}
+
+.container {
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+@media screen and (max-width: 1200px) {
+	.container {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.container {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.pt-50 {
+	padding-top: 50px;
+}
+
+.flex {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.grid-2 {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 600px) {
+	.grid-2 {
+		grid-template-columns: 1fr;
+	}
 }
 
 hr {
@@ -518,18 +578,135 @@ table {
 	width: 100%;
 }
 
+.site-footer {
+	padding: 50px 10px;
+	background-color: #eaeef1;
+	text-align: center;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 30px 0px;
+}
+
+.footer-copyright {
+	font-size: 16px;
+	margin-bottom: 15px;
+	color: #666;
+}
+
+.footer-made-by {
+	color: #777;
+	font-size: 14px;
+}
+
+.footer-menu {
+	display: flex;
+	column-gap: 15px;
+	row-gap: 5px;
+	flex-wrap: wrap;
+	list-style-type: none;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 15px;
+	font-size: 16px;
+}
+
+.site-header {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #eaeef1;
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 10px 0px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 22px;
+	/* identical to box height */
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+img.header-logo {
+	padding-top: 4px;
+	height: 50px;
+	filter: brightness(0);
+}
+
+#site-navigation {
+	text-align: right;
+}
+
+.header-menu {
+	display: flex;
+	column-gap: 25px;
+	list-style-type: none;
+	justify-content: right;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+
+.header-menu a {
+	color: #202A38;
+}
+
+.header-menu a:hover, .header-menu a:focus, .header-menu a:after, .header-menu a:visited {
+	color: #202A38;
+}
+
+.header-menu a:after {
+	background-color: #202A38;
+}
+
+.header-menu a:hover:after {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+#page {
+	position: relative;
+}
+
+.transparent.site-header {
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.transparent .header-menu a {
+	color: #F8FAFC;
+}
+
+.transparent .header-menu a:hover, .transparent .header-menu a:focus, .transparent .header-menu a:after, .transparent .header-menu a:visited {
+	color: #F8FAFC;
+}
+
+.transparent .header-menu a:after {
+	background-color: #F8FAFC;
+}
+
+.transparent img.header-logo {
+	filter: none;
+}
+
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #2b5681;
+	text-decoration: none;
 }
 
 a:visited {
-	color: #800080;
+	color: #552a55;
 }
 
 a:hover, a:focus, a:active {
-	color: #191970;
+	color: #175ca1;
 }
 
 a:focus {
@@ -538,6 +715,50 @@ a:focus {
 
 a:hover, a:active {
 	outline: 0;
+}
+
+span > a,
+li > a,
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+	padding-bottom: 1px;
+	position: relative;
+}
+
+span > a:after,
+li > a:after,
+h1 > a:after,
+h2 > a:after,
+h3 > a:after,
+h4 > a:after,
+h5 > a:after,
+h6 > a:after {
+	content: '';
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	opacity: 0;
+	transform: translateY(3px);
+	background: #2b5681;
+	transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+span > a:hover:after,
+li > a:hover:after,
+h1 > a:hover:after,
+h2 > a:hover:after,
+h3 > a:hover:after,
+h4 > a:hover:after,
+h5 > a:hover:after,
+h6 > a:hover:after {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 /* Forms
@@ -619,6 +840,10 @@ select {
 
 textarea {
 	width: 100%;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 /*--------------------------------------------------------------
@@ -723,11 +948,6 @@ textarea {
 --------------------------------------------- */
 .sticky {
 	display: block;
-}
-
-.post,
-.page {
-	margin: 0 0 1.5em;
 }
 
 .updated:not(.published) {
@@ -852,6 +1072,135 @@ textarea {
 	display: block;
 }
 
+/* Custom */
+.main-page-banner {
+	height: 110vh;
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-top: -50px;
+	margin-bottom: 50px;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}
+
+.main-page-banner .wp-block-site-tagline {
+	font-family: 'Quicksand';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 22px;
+	/* identical to box height */
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #F8FAFC;
+}
+
+.main-page-banner .header-titles {
+	margin-bottom: 30vh;
+}
+
+@media screen and (max-width: 1300px) {
+	.main-page-banner .header-titles img {
+		width: 70%;
+	}
+}
+
+.main-page-banner .wp-block-buttons {
+	width: 250px;
+	margin: auto;
+}
+
+.main-page-banner .wp-block-buttons a:after {
+	margin-left: 25px;
+	content: '▾';
+}
+
+.main-page-banner .custom-shape-divider-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.main-page-banner .custom-shape-divider-bottom svg {
+	position: relative;
+	display: block;
+	width: calc(134% + 1.3px);
+	height: 85px;
+	transform: rotateY(180deg);
+}
+
+.main-page-banner .custom-shape-divider-bottom .shape-fill {
+	fill: #F8FAFC;
+}
+
+.post-list > ul {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	row-gap: 25px;
+}
+
+.post-list .wp-block-post-title {
+	font-size: 20px;
+	letter-spacing: normal;
+}
+
+.post-list .wp-block-cover__inner-container {
+	text-align: center;
+	background-color: #ffffffee;
+	color: #202A38;
+	padding: 20px;
+}
+
+.post-list .wp-block-cover,
+.post-list .wp-block-cover-image {
+	min-height: auto;
+	padding: 50px 10%;
+}
+
+ul.wp-block-latest-posts__list {
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+ul.wp-block-latest-posts__list li {
+	margin: 0 !important;
+	position: relative;
+}
+
+ul.wp-block-latest-posts__list li .wp-block-latest-posts__featured-image {
+	width: 100%;
+}
+
+ul.wp-block-latest-posts__list li .wp-block-latest-posts__featured-image img {
+	width: 100%;
+	min-height: 250px;
+	object-fit: cover;
+}
+
+ul.wp-block-latest-posts__list li a {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	background-color: #ffffffee;
+	padding: 10px;
+	z-index: 2;
+	width: 70%;
+	text-align: center;
+	font-family: "Quicksand", "Segoe UI", Roboto, Ubuntu, -apple-system, sans-serif;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
@@ -888,7 +1237,7 @@ textarea {
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
+	background-color: #F8FAFC;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;

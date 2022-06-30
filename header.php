@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme
  *
@@ -9,11 +10,15 @@
  * @package La_petite_Montrealaise
  */
 
+$custom_logo_id = get_theme_mod('custom_logo');
+$logo = wp_get_attachment_image_src($custom_logo_id, 'full')[0];
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
@@ -21,39 +26,25 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'la-petite-montrealaise' ); ?></a>
+	<?php wp_body_open(); ?>
+	<div id="page" class="site">
+		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'la-petite-montrealaise'); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<header id="masthead" class="site-header container<?php if (is_front_page()) { echo ' transparent'; } ?>">
+			<div class="site-branding">
+				<a href="/"><img src="<?php echo $logo ?>" class="header-logo"></a>
+			</div>
+			<nav id="site-navigation" class="main-navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<?php esc_html_e('Primary Menu', 'la-petite-montrealaise'); ?>
+				</button>
 				<?php
-			else :
+				wp_nav_menu(
+					array(
+						'menu' => 'Menu principal',
+						'menu_class' => 'header-menu',
+					)
+				);
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$_s_description = get_bloginfo( 'description', 'display' );
-			if ( $_s_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $_s_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'la-petite-montrealaise' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+			</nav><!-- #site-navigation -->
+		</header><!-- #masthead -->

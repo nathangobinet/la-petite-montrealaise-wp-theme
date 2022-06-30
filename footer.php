@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -11,24 +12,23 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'la-petite-montrealaise' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'la-petite-montrealaise' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'la-petite-montrealaise' ), 'la-petite-montrealaise', '<a href="https://automattic.com/">Automattic</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<footer id="colophon" class="site-footer">
+	<?php
+	wp_nav_menu(
+		array(
+			'menu' => 'Menu secondaire',
+			'menu_class' => 'footer-menu'
+		)
+	);
+	?>
+	<div class="footer-copyright">
+		© La petite Montréalaise
+	</div><!-- .site-info -->
+	<div class="footer-made-by">
+		par <a href="https://instagram.com/lilii_lev">Lili Hang Lévéillé</a> & <a href="https://github.com/nathangobinet">Nathan Gobinet</href>
+	</div><!-- .site-info -->
+</footer><!-- #colophon -->
 </div><!-- #page -->
-
-<?php wp_footer(); ?>
-
 </body>
+
 </html>

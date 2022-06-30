@@ -3,7 +3,7 @@ Theme Name: La_petite_Montrealaise
 
 WooCommerce styles override
 */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300,400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
 /**
  * Shop tables
@@ -304,7 +304,7 @@ ul.products li.product .button {
 	top: 0;
 	position: absolute;
 	left: 0;
-	color: #4169e1;
+	color: #2b5681;
 }
 
 p.stars a {
@@ -328,38 +328,38 @@ p.stars a::before {
 	line-height: 1;
 	font-family: star;
 	content: "\53";
-	color: #404040;
+	color: #202A38;
 	text-indent: 0;
 	opacity: 0.25;
 }
 
 p.stars a:hover ~ a::before {
 	content: "\53";
-	color: #404040;
+	color: #202A38;
 	opacity: 0.25;
 }
 
 p.stars:hover a::before {
 	content: "\53";
-	color: #4169e1;
+	color: #2b5681;
 	opacity: 1;
 }
 
 p.stars.selected a.active::before {
 	content: "\53";
-	color: #4169e1;
+	color: #2b5681;
 	opacity: 1;
 }
 
 p.stars.selected a.active ~ a::before {
 	content: "\53";
-	color: #404040;
+	color: #202A38;
 	opacity: 0.25;
 }
 
 p.stars.selected a:not(.active)::before {
 	content: "\53";
-	color: #4169e1;
+	color: #2b5681;
 	opacity: 1;
 }
 
@@ -509,7 +509,7 @@ p.no-comments {
 	height: 1em;
 	cursor: ew-resize;
 	outline: none;
-	background: #4169e1;
+	background: #2b5681;
 	box-sizing: border-box;
 	margin-top: -0.25em;
 	opacity: 1;
@@ -528,7 +528,7 @@ p.no-comments {
 	z-index: 1;
 	display: block;
 	border: 0;
-	background: #4169e1;
+	background: #2b5681;
 }
 
 .widget_price_filter .price_slider_wrapper .ui-widget-content {
